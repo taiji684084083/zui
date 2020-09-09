@@ -1,0 +1,30 @@
+@import "./var.scss";
+
+@mixin b($block){
+    $B:$name-space + '-' + $block;
+    .#{$B}{
+        @content;
+    }
+}
+
+@mixin m($modifier){
+    $currentSelector:'';
+    // 进行拼接
+    @each $unit in $modifier{
+        $currentSelector: #{$currentSelector + & + '-' + $unit + ',' }
+    }
+    // 作用到最根级 父级名字+传入的名字
+    @at-root{
+        #{& + $currentSelector}{
+            @content;
+        }
+    }
+}
+
+@mixin when($name){
+    @at-root{
+        #{$state-profix + '-' + $name}{
+            @content;
+        }
+    }
+}
