@@ -7,7 +7,6 @@
     }
 }
 
-
 @mixin m($modifier){
     $currentSelector:'';
     // 进行拼接
@@ -21,6 +20,7 @@
         }
     }
 }
+
 
 @mixin when($name){
     @at-root{
@@ -37,3 +37,17 @@
        }
     }   
 }
+
+@mixin clear {
+    $select: &;
+    @at-root {
+      #{$select}::after,
+      #{$select}::before {
+        display: table;
+        content: "";
+      }
+      #{$select}::after {
+        clear: both;
+      }
+    }
+  }

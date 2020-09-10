@@ -59,6 +59,7 @@ export default {
 @include b(row) {
   position: relative;
   box-sizing: border-box;
+  @include clear();
   // background: red;
 
   @include m(flex){

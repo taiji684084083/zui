@@ -1,7 +1,8 @@
 <template>
     <div class="app">
         <z-row>
-           <z-col></z-col>
+           <z-col :span="12" :xs="{span:6,pull:6}" class="hidden-xs-only"></z-col>
+           <z-col :style="{background:'green'}" :span="12" :xs="{span:6,pull:6}" class="hidden-xs-only"></z-col>
         </z-row>
     </div>
 </template>
@@ -17,5 +18,11 @@ export default {
 </script>
 
 <style scoped>
-
+.z-col{
+    background: green;
+}
+.z-col{
+    height: 300px;
+    background: red;
+}
 </style>

@@ -88,7 +88,7 @@ export default {
 @import "../../../style/mixin.scss";
 
 //分栏布局
-.z-row{
+.z-col{
     float: left;
     box-sizing: border-box;
 }
@@ -147,6 +147,5 @@ $res-list:'xs','sm','md','lg','xl';
       }
     }
 }
-
 
 </style>
