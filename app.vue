@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <z-row>
-            <h1>this is row</h1>
+           <z-col></z-col>
         </z-row>
     </div>
 </template>
@@ -10,7 +10,8 @@
 export default {
     name:'app',
     components: {
-        zRow:()=>import('./components/layout/row/src/row.vue')
+        zRow:()=>import('./components/layout/row/row.vue'),
+        zCol:()=>import('./components/layout/col/col.vue')
     }
 }
 </script>

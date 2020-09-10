@@ -7,6 +7,7 @@
     }
 }
 
+
 @mixin m($modifier){
     $currentSelector:'';
     // 进行拼接
@@ -27,4 +28,12 @@
             @content;
         }
     }
+}
+
+@mixin res($key,$map:$list){
+    @if map-get($map , $key ){
+       @media only screen and #{inspect(map-get($map,$key))} {
+           @content;
+       }
+    }   
 }
